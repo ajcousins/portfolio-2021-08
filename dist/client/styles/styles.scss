@@ -41,7 +41,6 @@ body {
   min-height: 100vh;
   background-attachment: fixed;
   background-color: $background;
-  // min-height: 100vh;
 }
 
 h1 {
@@ -74,16 +73,14 @@ h4 {
   font-size: 0.8rem;
   cursor: pointer;
   margin-left: 0.4em;
-  // transition: font-size 0.2s ease-in-out;
 
   &:hover {
     color: #ffffff;
   }
 
   &.selected {
-    // font-family: "Light";
     color: #00000044;
-    // margin-top: 0.3em;
+
     font-size: 0.8rem;
   }
 }
@@ -172,22 +169,12 @@ li {
   position: fixed;
   top: 0;
   left: 0;
-  // background: linear-gradient(
-  //   0deg,
-  //   rgba(212, 212, 212, 0) 0%,
-  //   rgba(177, 177, 177, 0.2) 36%,
-  //   rgba(148, 148, 148, 0.5) 63%,
-  //   rgba(113, 113, 113, 0.75) 85%,
-  //   rgba(84, 84, 84, 1) 100%
-  // );
-  // background-color: red;
   width: 100%;
   height: 20em;
   z-index: -1;
 
   & img {
     width: 100%;
-    // height: 100%;
   }
 }
 
@@ -322,10 +309,3 @@ li {
     }
   }
 }
-
-// @media only screen and (max-width: 800px) {
-//   .script {
-//     // display: none;
-//     background-color: red;
-//   }
-// }
