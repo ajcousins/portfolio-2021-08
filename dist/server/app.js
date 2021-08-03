@@ -1,7 +1,5 @@
 const path = require("path");
-// const favicon = require("serve-favicon");
 const express = require("express");
-const morgan = require("morgan");
 const viewRouter = require("./viewRouter");
 
 const app = express();

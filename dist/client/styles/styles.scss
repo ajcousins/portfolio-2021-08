@@ -4,6 +4,7 @@ $threequarters-black: #000000bd;
 $shadow: #00000033;
 $orange-hot: #ff773b;
 $orange-cool: #ffc359;
+$background: #d4d4d4;
 
 @font-face {
   font-family: "NirmalaUI-bold";
@@ -38,11 +39,14 @@ $orange-cool: #ffc359;
 
 body {
   min-height: 100vh;
+  background-attachment: fixed;
+  background-color: $background;
+  // min-height: 100vh;
 }
 
 h1 {
   margin-bottom: 1em;
-  color: $half-black;
+  color: $threequarters-black;
   font-family: "Bold";
   font-size: 3rem;
 }
@@ -64,18 +68,24 @@ h3 {
 }
 
 h4 {
-  color: $half-black;
+  color: $threequarters-black;
   font-family: "Bold";
   margin-top: 0.3em;
   font-size: 0.8rem;
   cursor: pointer;
   margin-left: 0.4em;
+  // transition: font-size 0.2s ease-in-out;
 
   &:hover {
-    font-size: 0.9rem;
+    color: #ffffff;
   }
 
-  transition: font-size 0.2s ease-in-out;
+  &.selected {
+    // font-family: "Light";
+    color: #00000044;
+    // margin-top: 0.3em;
+    font-size: 0.8rem;
+  }
 }
 
 p {
@@ -158,16 +168,27 @@ li {
   }
 }
 
-.canvas {
-  background: rgb(252, 228, 159);
-  background: linear-gradient(
-    0deg,
-    rgba(252, 228, 159, 1) 0%,
-    rgba(238, 233, 223, 1) 50%,
-    rgba(223, 234, 238, 1) 100%
-  );
-  background-attachment: fixed;
-  min-height: 100vh;
+.fade-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  // background: linear-gradient(
+  //   0deg,
+  //   rgba(212, 212, 212, 0) 0%,
+  //   rgba(177, 177, 177, 0.2) 36%,
+  //   rgba(148, 148, 148, 0.5) 63%,
+  //   rgba(113, 113, 113, 0.75) 85%,
+  //   rgba(84, 84, 84, 1) 100%
+  // );
+  // background-color: red;
+  width: 100%;
+  height: 20em;
+  z-index: -1;
+
+  & img {
+    width: 100%;
+    // height: 100%;
+  }
 }
 
 .map {
@@ -266,6 +287,7 @@ li {
     grid-template-columns: 2fr 1fr;
     gap: 3em;
     margin-bottom: 10em;
+    min-height: 80vh;
   }
 
   &__right__img {
@@ -301,9 +323,9 @@ li {
   }
 }
 
-@media only screen and (max-width: 800px) {
-  .script {
-    // display: none;
-    background-color: red;
-  }
-}
+// @media only screen and (max-width: 800px) {
+//   .script {
+//     // display: none;
+//     background-color: red;
+//   }
+// }
