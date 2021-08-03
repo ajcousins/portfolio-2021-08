@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "title": "Twittr",
+      "subHeading": "A Twitter Clone",
+      "id": "twittr",
+      "image": "./images/twitter02.png",
+      "icon": "./images/icons/twitter_icon.png",
+      "links": {
+        "live": "https://hydro-eds-18702.herokuapp.com/",
+        "code": "https://github.com/ajcousins/odinbook"
+      },
+      "stack": [
+        "Node",
+        "Express",
+        "Axios",
+        "JWT",
+        "MongoDB/ Mongoose",
+        "ReactJS",
+        "Sass",
+        "AWS S3"
+      ],
+      "explanation": [
+        "This project aims to clone the existing social media application: Twitter. Here I was able to focus exclusively on the code and how the technologies interfaced, as the design was already taken care of.",
+        "Back-end tasks included building a rest API, database management, JWT authentication with cookies, parsing upload information using Multer and interfacing with AWS S3 for secure image storage.",
+        "The project involved solving a few problems with regards to database relationships between Tweet (tweet-replies and re-tweets) and User (following and follower) models.",
+        "This was also my first time using Sass and the BEM class naming system, which helped better organise my CSS. Sass was especially useful for managing global colours as variables throughout the app."
+      ]
+    },
+    {
+      "title": "Meal Planner",
+      "subHeading": "Food Management App",
+      "id": "meal-planner",
+      "image": "./images/mealplanner01.png",
+      "icon": "./images/icons/meal-planner_icon.png",
+      "links": {
+        "live": "https://powerful-depths-88188.herokuapp.com/",
+        "code": "https://github.com/ajcousins/meals-manager"
+      },
+      "stack": ["Node", "Express", "Mongoose", "Pug Templates", "Passport.js"],
+      "explanation": [
+        "An application which manages food items put in the fridge (or any other location) and orders items to ensure foods that are near expiry get eaten. The idea was to address the problem of food items unnecessarily going off at the back of the fridge.",
+        "With this app I was able to put newly learned back-end skills into practice, such as simple database management: creating users, locations and food items; as well as authentication using Passport.js.",
+        "All pages are server-side rendered through the use of pug templates."
+      ]
+    },
+    {
+      "title": "Pepper Kitchen",
+      "subHeading": "Hot Sauce Online Store",
+      "id": "pepper-kitchen",
+      "image": "./images/pepperkitchen01.png",
+      "icon": "./images/icons/pepper-kitchen_icon.png",
+      "links": {
+        "live": "https://ajcousins.github.io/pk-shop/",
+        "code": "https://github.com/ajcousins/pk-shop"
+      },
+      "stack": ["ReactJS", "React Router"],
+      "explanation": [
+        "A simple multi-page React application using React Router to direct routes and React Parallax for the scroll effect.",
+        "These technologies have enabled me to recreate a website I had previously designed on Squarespace for a hot sauce company I had helped create in 2018. The company is no longer selling hot sauce and the original website is no longer live, but thankfully this new application can now live for free on GitHub as a personal tribute."
+      ]
+    },
+    {
+      "title": "Weather",
+      "subHeading": "A Twitter Clone",
+      "id": "weather",
+      "image": "./images/weather01.png",
+      "icon": "./images/icons/weather_icon.png",
+      "links": {
+        "live": "https://ajcousins.github.io/weather-app/",
+        "code": "https://github.com/ajcousins/weather-app"
+      },
+      "stack": ["Vanilla JavaScript"],
+      "explanation": [
+        "A simple weather application which calls on the openweathermap.org API for data covering the next 7 days. I took this opportunity to learn about CSS transitions, animations and SVGs which I think work particularly well for this app. The design inspiration is from the weather graphic shown at the end of the BBC weather forecast."
+      ]
+    },
+    {
+      "title": "Noughts and Crosses",
+      "subHeading": "Unbeatable AI using the Minimax algorithm",
+      "id": "tic-tac-toe",
+      "image": "./images/tictactoe01.png",
+      "icon": "./images/icons/tictactoe_icon.png",
+      "links": {
+        "live": "https://ajcousins.github.io/tictactoe/",
+        "code": "https://github.com/ajcousins/tictactoe"
+      },
+      "stack": ["Vanilla JavaScript"],
+      "explanation": [
+        "This was my first attempt at implementing AI through the Minimax algorithm (set opponent to 'Hard Computer'), which recursively evaluates the board for each side, returning the best move for any given position."
+      ]
+    },
+    {
+      "title": "Metric Cook Book",
+      "id": "metric-cook-book",
+      "subHeading": "",
+      "image": "./images/metriccookbook01.png",
+      "icon": "./images/icons/metriccookbook_icon.png",
+      "links": {
+        "live": "https://metriccookbook.herokuapp.com/",
+        "code": "https://github.com/ajcousins/Metric-Cookbook",
+        "video": "https://www.youtube.com/watch?v=IwiIrlaTZU0"
+      },
+      "stack": ["Python", "Flask", "SQLite", "Vanilla JavaScript"],
+      "explanation": [
+        "Submission for my CS50x final project: Cook Book, which is an online app which processes and converts recipe quantities with a range of different units. The app was intended to solve the problem of having to deal with a range of different cooking units for recipes over the internet, with the majority of American recipes using imperial units. The app allows a user to simply paste in the ingredients list with quantities, and for each item to be automatically converted to metric units (or vice-versa, to imperial). The app also allows scaling of recipes to accommodate different serving numbers.",
+        "The project uses Flask, a back-end Python framework, to handle the processing of data, which is stored in a SQL database (SQLite). Simple JavaScript is also used on the front-end to render changes to serving quantities.",
+        "CS50x is a self-paced online introductory Computer Science course created and run by Harvard University. The course teaches students how to think algorithmically and solve problems efficiently. The course introduces topics on algorithms, data structures, resource management, security and web programming."
+      ]
+    }
+  ]
+}

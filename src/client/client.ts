@@ -14,7 +14,11 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000
 );
-camera.position.set(0, 3.5, 21.5);
+camera.position.set(
+  0,
+  3.5,
+  window.innerWidth / window.innerHeight < 1.3 ? 40 : 21.5
+);
 
 // RENDERER
 const renderer = new THREE.WebGLRenderer({ alpha: true });
@@ -26,10 +30,6 @@ document.body.appendChild(renderer.domElement);
 
 // PICKABLE SET UP
 const pickableObjects: THREE.Mesh[] = [];
-const highlightedMaterial = new THREE.MeshBasicMaterial({
-  color: 0xffffff,
-  transparent: true,
-});
 
 // CONTROLS
 // const controls = new OrbitControls(camera, renderer.domElement);
@@ -43,18 +43,18 @@ light.castShadow = true;
 light.shadow.mapSize.width = 4096;
 light.shadow.mapSize.height = 4096;
 light.shadow.camera.near = 150;
-light.shadow.camera.far = 220;
+light.shadow.camera.far =
+  window.innerWidth / window.innerHeight < 1.3 ? 440 : 220;
 light.angle = 0.1;
 scene.add(light);
 scene.add(light.target);
-// const helper = new THREE.SpotLightHelper(light);
 // const helper = new THREE.CameraHelper(light.shadow.camera);
 // scene.add(helper);
 
 // OBJECTS
 // const boxGeometry: THREE.BoxGeometry = new THREE.BoxGeometry();
 const sunGeometry = new THREE.IcosahedronGeometry(2, 4);
-const groundPlaneGeometry = new THREE.PlaneGeometry(80, 80);
+const groundPlaneGeometry = new THREE.PlaneGeometry(80, 120);
 const portfolioSelectGeo = new THREE.BoxGeometry(1.1, 6.4, 0.1);
 const aboutSelectGeo = new THREE.BoxGeometry(2, 8, 0.1);
 const contactSelectGeo = new THREE.BoxGeometry(1.4, 6.6, 0.1);
@@ -125,6 +125,7 @@ const sunMesh = new THREE.Mesh(sunGeometry, sunMaterial);
 sunMesh.position.set(0, 12, -200);
 scene.add(sunMesh);
 
+// const groundPlane = new THREE.Mesh(groundPlaneGeometry, sunMaterial);
 const groundPlane = new THREE.Mesh(groundPlaneGeometry, shadowMaterial);
 groundPlane.position.set(0, 0, -30);
 groundPlane.receiveShadow = true;

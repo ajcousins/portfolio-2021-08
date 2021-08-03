@@ -1,0 +1,47 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+        link(rel="stylesheet" href="styles/styles.css")
+        title Alvin Cousins | Contact
+        script(type="module" src="contact.js")
+        link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+        link(rel="manifest" href="/site.webmanifest")
+    body
+        //- div(class="map")
+        img(class="map" src="images/uk-map_02.svg")
+        div(class="canvas")
+            div(class="content content__contact")
+                div(class="content__main")
+                    h1 CONTACT
+
+                    //- div(class="paragraphs__center-vertical")
+                    div(class="paragraphs") 
+                        h3(class="paragraphs__string bottom-buffer") Any questions? Please feel free to get in touch.
+                        div(class="paragraphs__contact-container")
+                            img(class="icon" src="images/icons/mail.svg")
+                            button(id="email-add" class="contact") alvin.cousins.tech@gmail.com
+                            input(id="email-add-val" value="email address" type="hidden")
+                        div(class="paragraphs__contact-container")
+                            img(class="icon" src="images/icons/linkedin.svg")
+                            a(href="https://www.linkedin.com/in/alvin-cousins-94649059/" target="_blank")
+                                button(class="contact") Linkedin
+                        div(class="paragraphs__contact-container")
+                            img(class="icon" src="images/icons/github.svg")
+                            a(href="https://github.com/ajcousins" target="_blank")
+                                button(class="contact") GitHub
+
+                div(class="content__sun-col")
+                    a(href="/")
+                        img(class="content__sun-col__sun" src="images/sun_02.svg")
+                    a(href="/portfolio")
+                        h4 PORTFOLIO 
+                    a(href="/about")
+                        h4 ABOUT
+            
+            
+        div(class="footer") © 2021 Alvin Cousins
