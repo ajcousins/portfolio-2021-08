@@ -11,37 +11,34 @@ html(lang="en")
         link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
         link(rel="manifest" href="/site.webmanifest")
     body
-        div(class="fade-header")
-                img(class="fade-header" src="images/fade-header_01.svg" )
-        div(class="canvas")
-            div(class="content")
-                div(class="content__main")
-                    h1 ABOUT
-                    div(class="content__flex-wrapper")
-                        div(class="content__left")
-                            div(class="paragraphs") 
-                                p(class="paragraphs__string") Hello, I’m Alvin Cousins, an aspiring full-stack developer.
-                                p(class="paragraphs__string") I have been working towards a new career path in tech since December 2020. This comes after working for over 10 years in the construction industry as an Architectural Lighting Designer/ Consultant and as an Architectural Assistant before that. These years working in construction have given me:
-                                    ul
-                                        li A strong foundation in problem solving and design beyond mere aesthetics.
-                                        li Insight into how technologies and systems can elegantly interact and work seamlessly.
-                                        li Project delivery and management experience working in various teams with other designers and professionals from other disciplines. 
-                                br
-                                p(class="paragraphs__string") I have always had a large appetite for learning new things and broadening my skill set whenever the opportunity arose. This attitude along with a humble mindset and willingness to adapt has served me well so far. Hopefully this puts me in good stead to successfully transition into a career in tech.
+        div(class="content")
+            div(class="content__main")
+                h1(class="side-heading") ABOUT
+                div(class="content__flex-wrapper")
+                    div(class="content__left")
+                        div(class="paragraphs") 
+                            p(class="paragraphs__string") Hello, I’m Alvin Cousins, an aspiring full-stack developer.
+                            p(class="paragraphs__string") I have been working towards a new career path in tech since December 2020. This comes after working for over 10 years in the construction industry as an Architectural Lighting Designer/ Consultant and as an Architectural Assistant before that. These years working in construction have given me:
+                                ul
+                                    li A strong foundation in problem solving and design beyond mere aesthetics.
+                                    li Insight into how technologies and systems can elegantly interact and work seamlessly.
+                                    li Project delivery and management experience working in various teams with other designers and professionals from other disciplines. 
                             br
-                            br
-                            a(class="paragraphs__cta" href="/contact") Contact Me
-                        div(class="content__right")
-                            img(class="content__right__img" src="images/ac-mug-shot.jpg")
+                            p(class="paragraphs__string") I have always had a large appetite for learning new things and broadening my skill set whenever the opportunity arose. This attitude along with a humble mindset and willingness to adapt has served me well so far. Hopefully this puts me in good stead to successfully transition into a career in tech.
+                        br
+                        br
+                        a(class="paragraphs__cta" href="/contact") Contact Me
+                    div(class="content__right")
+                        img(class="content__right__img" src="images/ac-mug-shot.jpg")
 
 
-                div(class="content__sun-col")
-                    a(href="/")
-                        img(class="content__sun-col__sun" src="images/sun_02.svg")
-                    a(href="/portfolio")
-                        h4 PORTFOLIO 
-                    h4(class="selected") ABOUT
-                    a(href="/contact")
-                        h4 CONTACT
+            div(class="content__sun-col")
+                a(href="/")
+                    img(class="content__sun-col__sun" src="images/sun_02.svg")
+                a(href="/portfolio")
+                    h4 PORTFOLIO 
+                h4(class="selected") ABOUT
+                a(href="/contact")
+                    h4 CONTACT
         
         div(class="footer") © 2021 Alvin Cousins

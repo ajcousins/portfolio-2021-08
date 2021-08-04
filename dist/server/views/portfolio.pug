@@ -6,56 +6,62 @@ html(lang="en")
 
         link(rel="stylesheet" href="styles/styles.css")
         title Alvin Cousins | Portfolio
-        script(type="module" src="portfolio.js")
+        //- script(type="module" src="portfolio.js")
         link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
         link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
         link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
         link(rel="manifest" href="/site.webmanifest")
         
     body
-        div(class="fade-header")
-            img(class="fade-header" src="images/fade-header_01.svg" )
+
         div(class="canvas")
             div(class="content")
                 div(class="content__main")
-                    h1 PORTFOLIO
+                    h1(class="side-heading") PORTFOLIO
 
-                    div(id="navbar" class="navbar")
-                        div(class="navbar__thumb-container")
-                        div(class="navbar__cursor-container")
-                            div(class="navbar__cursor")
+                    div(class="content__apps-grid")
+                        each project in projects.data 
+                            div(class="content__apps-grid__item")
+                                a(href=`project/${project.id}`)
+                                    img(class="content__apps-grid__icon" src=project.icon)
+                                    div(class="content__apps-grid__title") #{project.title}
 
-                    each project in projects.data
-                        div(class="project" id=project.id)
-                            div(class="project__title")
-                                    h2 #{project.title}
-                            div(class="project__info")
-                                div(class="project__info__text")
-                                    p 
+                //-     div(id="navbar" class="navbar")
+                //-         div(class="navbar__thumb-container")
+                //-         div(class="navbar__cursor-container")
+                //-             div(class="navbar__cursor")
+
+                //-     each project in projects.data
+                //-         div(class="project" id=project.id)
+                //-             div(class="project__title")
+                //-                     h2 #{project.title}
+                //-             div(class="project__info")
+                //-                 div(class="project__info__text")
+                //-                     p 
                                        
-                                        div(class="paragraphs") 
-                                            each paragraph in project.explanation 
-                                                p(class="paragraphs__string") #{paragraph}
+                //-                         div(class="paragraphs") 
+                //-                             each paragraph in project.explanation 
+                //-                                 p(class="paragraphs__string") #{paragraph}
                                         
-                                        br
-                                        span(class="label") Links: 
-                                        br
-                                        span(class="item")
-                                            a(href=project.links.live target="_blank") Live 
-                                            span #{"| "}
-                                                a(href=project.links.code target="_blank") Code 
-                                            if project.links.video
-                                                span #{"| "}
-                                                    a(href=project.links.video target="_blank") Video 
-                                        br
-                                        br
-                                        span(class="label") Technologies: 
-                                        br
-                                        span(class="item")
-                                            each tech, index in project.stack 
-                                                span #{tech}#{index === project.stack.length - 1 ? "." : ", " }
+                //-                         br
+                //-                         span(class="label") Links: 
+                //-                         br
+                //-                         span(class="item")
+                //-                             a(href=project.links.live target="_blank") Live 
+                //-                             span #{"| "}
+                //-                                 a(href=project.links.code target="_blank") Code 
+                //-                             if project.links.video
+                //-                                 span #{"| "}
+                //-                                     a(href=project.links.video target="_blank") Video 
+                //-                         br
+                //-                         br
+                //-                         span(class="label") Technologies: 
+                //-                         br
+                //-                         span(class="item")
+                //-                             each tech, index in project.stack 
+                //-                                 span #{tech}#{index === project.stack.length - 1 ? "." : ", " }
                             
-                                img(class="project__image" src=project.image)
+                //-                 img(class="project__image" src=project.image)
                 
                 div(class="content__sun-col")
                     a(href="/")
@@ -69,4 +75,4 @@ html(lang="en")
         
         input(id="data" type="hidden" value=projects)
         
-        div(class="footer") © 2021 Alvin Cousins
+        //- div(class="footer") Alvin Cousins | 2021

@@ -4,7 +4,8 @@
       "title": "Twittr",
       "subHeading": "A Twitter Clone",
       "id": "twittr",
-      "image": "./images/twitter02.png",
+      "layout": "project-layout-1",
+      "images": ["twittr-scrn-01.png", "twittr-scrn-02.png"],
       "icon": "./images/icons/twitter_icon.png",
       "links": {
         "live": "https://hydro-eds-18702.herokuapp.com/",
@@ -31,7 +32,7 @@
       "title": "Meal Planner",
       "subHeading": "Food Management App",
       "id": "meal-planner",
-      "image": "./images/mealplanner01.png",
+      "layout": "project-layout-1",
       "icon": "./images/icons/meal-planner_icon.png",
       "links": {
         "live": "https://powerful-depths-88188.herokuapp.com/",
@@ -48,7 +49,7 @@
       "title": "Pepper Kitchen",
       "subHeading": "Hot Sauce Online Store",
       "id": "pepper-kitchen",
-      "image": "./images/pepperkitchen01.png",
+      "layout": "project-layout-1",
       "icon": "./images/icons/pepper-kitchen_icon.png",
       "links": {
         "live": "https://ajcousins.github.io/pk-shop/",
@@ -64,7 +65,7 @@
       "title": "Weather",
       "subHeading": "A Twitter Clone",
       "id": "weather",
-      "image": "./images/weather01.png",
+      "layout": "project-layout-1",
       "icon": "./images/icons/weather_icon.png",
       "links": {
         "live": "https://ajcousins.github.io/weather-app/",
@@ -76,10 +77,10 @@
       ]
     },
     {
-      "title": "Noughts and Crosses",
+      "title": "Noughts & Crosses",
       "subHeading": "Unbeatable AI using the Minimax algorithm",
-      "id": "tic-tac-toe",
-      "image": "./images/tictactoe01.png",
+      "id": "noughts-and-crosses",
+      "layout": "project-layout-1",
       "icon": "./images/icons/tictactoe_icon.png",
       "links": {
         "live": "https://ajcousins.github.io/tictactoe/",
@@ -93,8 +94,8 @@
     {
       "title": "Metric Cook Book",
       "id": "metric-cook-book",
+      "layout": "project-layout-1",
       "subHeading": "",
-      "image": "./images/metriccookbook01.png",
       "icon": "./images/icons/metriccookbook_icon.png",
       "links": {
         "live": "https://metriccookbook.herokuapp.com/",

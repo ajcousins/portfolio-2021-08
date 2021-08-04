@@ -4,7 +4,7 @@ $threequarters-black: #000000bd;
 $shadow: #00000033;
 $orange-hot: #ff773b;
 $orange-cool: #ffc359;
-$background: #d4d4d4;
+$background: rgb(255, 233, 171);
 
 @font-face {
   font-family: "NirmalaUI-bold";
@@ -38,8 +38,8 @@ $background: #d4d4d4;
 }
 
 body {
-  min-height: 100vh;
-  background-attachment: fixed;
+  // min-height: 100vh;
+  // background-attachment: fixed;
   background-color: $background;
 }
 
@@ -47,7 +47,25 @@ h1 {
   margin-bottom: 1em;
   color: $threequarters-black;
   font-family: "Bold";
-  font-size: 3rem;
+  font-size: 6rem;
+
+  &.side-heading {
+    margin: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    transform: rotate(-90deg);
+    margin-bottom: -6rem;
+    transform-origin: 0 0;
+    z-index: -1;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  h1.side-heading {
+    font-size: 4rem;
+    margin-bottom: -4rem;
+  }
 }
 
 h2 {
@@ -88,7 +106,7 @@ h4 {
 p {
   font-size: 1rem;
   line-height: 1.8em;
-  color: $threequarters-black;
+  color: black;
 }
 
 button.contact {
@@ -120,10 +138,11 @@ a {
 }
 
 span {
-  color: $threequarters-black;
+  color: black;
+  line-height: 1.8em;
   &.label {
     display: inline-block;
-    color: $threequarters-black;
+    color: black;
     width: 5em;
     font-family: "Bold";
   }
@@ -165,19 +184,6 @@ li {
   }
 }
 
-.fade-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 20em;
-  z-index: -1;
-
-  & img {
-    width: 100%;
-  }
-}
-
 .map {
   position: absolute;
   top: 0;
@@ -186,56 +192,56 @@ li {
   height: 100vh;
 }
 
-.navbar {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+// .navbar {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
 
-  position: sticky;
-  top: 0em;
-  margin-bottom: 5em;
+//   position: sticky;
+//   top: 0em;
+//   margin-bottom: 5em;
 
-  &__thumb-container {
-    display: flex;
-    padding-top: 1em;
-    height: 6em;
-  }
+//   &__thumb-container {
+//     display: flex;
+//     padding-top: 1em;
+//     height: 6em;
+//   }
 
-  &__cursor-container {
-    width: 100%;
-    height: 0.5em;
-  }
+//   &__cursor-container {
+//     width: 100%;
+//     height: 0.5em;
+//   }
 
-  &__thumb {
-    width: 5em;
-    margin-right: 0.5em;
-    cursor: pointer;
-    box-shadow: 10px 10px 30px 5px $shadow;
+//   &__thumb {
+//     width: 5em;
+//     margin-right: 0.5em;
+//     cursor: pointer;
+//     box-shadow: 10px 10px 30px 5px $shadow;
 
-    &:hover {
-      transform: scale(1.02);
-    }
-  }
+//     &:hover {
+//       transform: scale(1.02);
+//     }
+//   }
 
-  &__cursor {
-    margin-top: 0.2em;
-    width: 0em;
-    height: 0.3em;
-    background-color: white;
-    transition: width 0.2s, margin-left 0.1s ease-in-out;
-  }
+//   &__cursor {
+//     margin-top: 0.2em;
+//     width: 0em;
+//     height: 0.3em;
+//     background-color: white;
+//     transition: width 0.2s, margin-left 0.1s ease-in-out;
+//   }
 
-  &__width {
-    width: 5em;
-  }
-}
+//   &__width {
+//     width: 5em;
+//   }
+// }
 
 .footer {
   position: relative;
   display: flex;
   justify-content: center;
   height: 3em;
-  margin-top: -3em;
+  margin-bottom: -3em;
   font-size: 0.8rem;
 }
 
@@ -243,7 +249,7 @@ li {
   display: flex;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 3em 0 0 2em;
+  padding: 3em 0 0 4em;
 
   &__contact {
     height: 100%;
@@ -251,6 +257,7 @@ li {
 
   &__main {
     width: 100%;
+    min-height: 85vh;
   }
 
   &__sun-col {
@@ -280,32 +287,136 @@ li {
   &__right__img {
     width: 300px;
   }
+
+  &__apps-grid {
+    // background-color: #ff000022;
+    // margin: auto 3em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 45em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 3em;
+
+    &__footer-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // background-color: red;
+      height: 100vh;
+      width: 100%;
+
+      &__footer {
+        // position: absolute;
+        width: 45em;
+        // margin: 30vh auto 30vh auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        gap: 3em;
+        // background-color: cyan;
+        bottom: 0;
+      }
+    }
+
+    &__item {
+      height: 11.5em;
+    }
+
+    &__icon {
+      height: 8em;
+      border-radius: 1.5em;
+      cursor: pointer;
+      box-shadow: 5px 5px 15px 5px $shadow;
+    }
+
+    &__title {
+      width: 128px;
+      font-size: 0.9rem;
+      margin: 1em 0 0 0;
+      color: $threequarters-black;
+      text-align: center;
+      font-family: "Bold";
+    }
+  }
 }
 
-.project {
-  display: flex;
-  flex-direction: column;
-  min-height: 5em;
-  margin-bottom: 15em;
+// .project {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 5em;
+//   margin-bottom: 15em;
+
+//   &__title {
+//     margin-bottom: 1em;
+//   }
+
+//   &__image {
+//     margin-left: 3em;
+//     width: 235px;
+//     height: 235px;
+//     box-shadow: 20px 20px 30px 5px $shadow;
+//   }
+
+//   &__info {
+//     display: flex;
+//     width: 100%;
+//     height: 100%;
+
+//     &__text {
+//       width: 100%;
+//     }
+//   }
+// }
+
+.sun {
+  position: fixed;
+  top: 0;
+  // background-color: cyan;
+  right: 0;
+  top: 5em;
+  width: 15em;
+  height: 10em;
+  // padding: 2em 2em auto 0;
+
+  // &__wrapper {
+  //   background-color: red;
+  //   width: 100%;
+  //   height: 100%;
+  //   margin: 2em 2em auto 0;
+  // }
+}
+
+.layout-1 {
+  background-color: $background;
+  overflow: hidden;
+  // position: absolute;
+  // top: 40%;
+  // left: 0;
+  padding-top: 40vh;
+  width: 100%;
+  min-height: 10em;
+  padding-left: 12em;
+  // padding-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr 55%;
+  // gap: 8em;
+  padding-bottom: 10em;
 
   &__title {
-    margin-bottom: 1em;
+    font-size: 4em;
+    margin: 2em 0 0.5em 0;
   }
 
-  &__image {
-    margin-left: 3em;
-    width: 235px;
-    height: 235px;
-    box-shadow: 20px 20px 30px 5px $shadow;
+  &__img {
+    margin-bottom: 2em;
+    box-shadow: 5px 5px 15px 5px $shadow;
   }
 
-  &__info {
-    display: flex;
-    width: 100%;
-    height: 100%;
-
-    &__text {
-      width: 100%;
-    }
+  &__block-text {
+    width: 20em;
   }
 }
