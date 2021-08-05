@@ -38,8 +38,6 @@ $background: rgb(255, 233, 171);
 }
 
 body {
-  // min-height: 100vh;
-  // background-attachment: fixed;
   background-color: $background;
 }
 
@@ -77,11 +75,12 @@ h2 {
 
 h3 {
   color: $threequarters-black;
-  font-size: 1.125rem;
+  font-size: 1.75rem;
+  font-family: "Bold";
 
-  &.bottom-buffer {
-    margin-bottom: 2em;
-  }
+  // &.bottom-buffer {
+  //   margin-bottom: 2em;
+  // }
 }
 
 h4 {
@@ -122,10 +121,12 @@ button.contact {
   }
 }
 
-img.icon {
-  height: 1.5em;
-  margin-right: 0.5em;
-  display: inline-block;
+img {
+  &.icon {
+    height: 1.5em;
+    margin-right: 1em;
+    display: inline-block;
+  }
 }
 
 a {
@@ -140,16 +141,16 @@ a {
 span {
   color: black;
   line-height: 1.8em;
-  &.label {
-    display: inline-block;
-    color: black;
-    width: 5em;
+  &.bold {
     font-family: "Bold";
   }
 }
 
+div.bold {
+  font-family: "Bold";
+}
+
 li {
-  color: $threequarters-black;
   line-height: 1.8em;
 }
 
@@ -164,11 +165,15 @@ li {
     font-family: "Bold";
   }
 
-  &__contact-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
+  &__course-heading {
+    margin-bottom: 0;
   }
+
+  // &__contact-container {
+  //   display: flex;
+  //   align-items: center;
+  //   margin-bottom: 1em;
+  // }
 }
 
 .blurb {
@@ -184,66 +189,14 @@ li {
   }
 }
 
-.map {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-left: auto;
-  height: 100vh;
-}
-
-// .navbar {
+// .footer {
+//   position: relative;
 //   display: flex;
-//   flex-direction: column;
-//   width: 100%;
-
-//   position: sticky;
-//   top: 0em;
-//   margin-bottom: 5em;
-
-//   &__thumb-container {
-//     display: flex;
-//     padding-top: 1em;
-//     height: 6em;
-//   }
-
-//   &__cursor-container {
-//     width: 100%;
-//     height: 0.5em;
-//   }
-
-//   &__thumb {
-//     width: 5em;
-//     margin-right: 0.5em;
-//     cursor: pointer;
-//     box-shadow: 10px 10px 30px 5px $shadow;
-
-//     &:hover {
-//       transform: scale(1.02);
-//     }
-//   }
-
-//   &__cursor {
-//     margin-top: 0.2em;
-//     width: 0em;
-//     height: 0.3em;
-//     background-color: white;
-//     transition: width 0.2s, margin-left 0.1s ease-in-out;
-//   }
-
-//   &__width {
-//     width: 5em;
-//   }
+//   justify-content: center;
+//   height: 3em;
+//   margin-bottom: -3em;
+//   font-size: 0.8rem;
 // }
-
-.footer {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  height: 3em;
-  margin-bottom: -3em;
-  font-size: 0.8rem;
-}
 
 .content {
   display: flex;
@@ -280,6 +233,7 @@ li {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 3em;
+    margin-top: 12em;
     margin-bottom: 10em;
     min-height: 80vh;
   }
@@ -289,8 +243,6 @@ li {
   }
 
   &__apps-grid {
-    // background-color: #ff000022;
-    // margin: auto 3em;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -305,19 +257,15 @@ li {
       display: flex;
       align-items: center;
       justify-content: center;
-      // background-color: red;
       height: 100vh;
       width: 100%;
 
       &__footer {
-        // position: absolute;
         width: 45em;
-        // margin: 30vh auto 30vh auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-items: center;
         gap: 3em;
-        // background-color: cyan;
         bottom: 0;
       }
     }
@@ -344,67 +292,38 @@ li {
   }
 }
 
-// .project {
-//   display: flex;
-//   flex-direction: column;
-//   min-height: 5em;
-//   margin-bottom: 15em;
-
-//   &__title {
-//     margin-bottom: 1em;
-//   }
-
-//   &__image {
-//     margin-left: 3em;
-//     width: 235px;
-//     height: 235px;
-//     box-shadow: 20px 20px 30px 5px $shadow;
-//   }
-
-//   &__info {
-//     display: flex;
-//     width: 100%;
-//     height: 100%;
-
-//     &__text {
-//       width: 100%;
-//     }
-//   }
-// }
+// --- PROJECT PAGES ---
 
 .sun {
   position: fixed;
   top: 0;
-  // background-color: cyan;
   right: 0;
   top: 5em;
   width: 15em;
   height: 10em;
-  // padding: 2em 2em auto 0;
+}
 
-  // &__wrapper {
-  //   background-color: red;
-  //   width: 100%;
-  //   height: 100%;
-  //   margin: 2em 2em auto 0;
-  // }
+.tech-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5em;
+  &__icon {
+    height: 5em;
+    margin-right: 0.5em;
+  }
 }
 
 .layout-1 {
   background-color: $background;
   overflow: hidden;
-  // position: absolute;
-  // top: 40%;
-  // left: 0;
   padding-top: 40vh;
   width: 100%;
   min-height: 10em;
   padding-left: 12em;
-  // padding-top: 1em;
-  display: grid;
-  grid-template-columns: 1fr 55%;
-  // gap: 8em;
   padding-bottom: 10em;
+  display: grid;
+  grid-template-columns: 20em 55%;
+  gap: 18em;
 
   &__title {
     font-size: 4em;
@@ -416,7 +335,117 @@ li {
     box-shadow: 5px 5px 15px 5px $shadow;
   }
 
-  &__block-text {
-    width: 20em;
+  &__flex {
+    display: flex;
+    width: 50em;
+    justify-content: space-between;
+  }
+
+  &__sketch {
+    margin-top: 10em;
+  }
+
+  &__label {
+    display: inline-block;
+    margin-top: 4em;
+    color: black;
+    font-family: "Bold";
+  }
+}
+
+.layout-2 {
+  background-color: $background;
+  padding-top: 30vh;
+  padding-bottom: 10em;
+
+  &__img-wrapper {
+    display: flex;
+    width: 100%;
+    height: 20em;
+    justify-content: center;
+  }
+
+  &__central-img {
+    border-radius: 50%;
+  }
+
+  &__info-wrapper {
+    margin: 3em 12em 0 12em;
+  }
+
+  &__icon {
+    margin-right: 2em;
+  }
+
+  &__title {
+    display: inline-block;
+    font-size: 4em;
+    margin: 0.3em 0 0 0;
+  }
+
+  &__grid {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 22em 10em 10em;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  &__label {
+    display: inline-block;
+    margin-top: 4em;
+    color: black;
+    font-family: "Bold";
+  }
+}
+
+// --- CONTACT ---
+.contact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    position: relative;
+    width: 40em;
+    height: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__sun {
+    position: absolute;
+    top: -4em;
+    left: 2.5em;
+    height: 17em;
+    z-index: -1;
+  }
+  &__info {
+    width: 18em;
+  }
+  &__headings {
+    margin-bottom: 1em;
+  }
+  &__bold {
+    font-size: 1.75rem;
+    font-family: "Bold";
+  }
+  &__contact {
+    background-color: transparent;
+    display: inline-block;
+    border: none;
+    color: $threequarters-black;
+    cursor: pointer;
+    font-size: 1rem;
+
+    &:hover {
+      font-family: "Bold";
+    }
+  }
+  &__contact-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8em;
   }
 }

@@ -1,0 +1,36 @@
+html(lang="en")
+    include head.pug
+        title Alvin Cousins | #{project.title}
+        
+    body
+        include sun-nav.pug
+
+        div(class="layout-2")
+
+            div(class="layout-2__img-wrapper")
+                img(class="layout-2__central-img" src=`../images/projects/${project.images[0]}`)
+
+            div(class="layout-2__info-wrapper")
+                div(class="layout-2__header-wrapper")
+                    img(class="content__apps-grid__icon layout-2__icon" src=`.${project.icon}`)
+                    h1(class="layout-2__title") #{project.title}
+                div(class="layout-2__grid")
+                    each paragraph in project.explanation
+                        p(class="paragraphs__string") #{paragraph}
+                    div 
+                        div(class="layout-2__label") Links: 
+                        br
+                        span(class="item")
+                            a(href=project.links.live target="_blank") Live 
+                            span #{"| "}
+                                a(href=project.links.code target="_blank") Code 
+                            if project.links.video
+                                span #{"| "}
+                                    a(href=project.links.video target="_blank") Video 
+                    div
+                        br
+                        div(class="tech-icons")
+                            each tech in project.stack 
+                                img(class="tech-icons__icon"  src=`../images/icons/technologies/${tech}.svg` alt=tech)
+
+        include footer-tiles.pug

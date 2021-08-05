@@ -1,0 +1,43 @@
+html(lang="en")
+    include head.pug
+        title Alvin Cousins | #{project.title}
+
+    body
+        include sun-nav.pug
+ 
+        div(class="layout-1")
+
+            div(class="layout-1__left") 
+                img(class="content__apps-grid__icon" src=`.${project.icon}`)
+                h1(class="layout-1__title") #{project.title}
+                div(class="layout-1__block-text")
+                    each paragraph in project.explanation
+                        p(class="paragraphs__string") #{paragraph}
+                
+                div(class="layout-1__block-text")
+                    div(class="layout-1__label") Links: 
+                    br
+                    span(class="item")
+                        a(href=project.links.live target="_blank") Live 
+                        span #{"| "}
+                            a(href=project.links.code target="_blank") Code 
+                        if project.links.video
+                            span #{"| "}
+                                a(href=project.links.video target="_blank") Video 
+                    br
+                    div(class="layout-1__label") Technologies: 
+                    br
+                    div(class="tech-icons")
+                        each tech in project.stack 
+                            img(class="tech-icons__icon"  src=`../images/icons/technologies/${tech}.svg` alt=tech)
+                    img(class="layout-1__sketch" src= project.images[4] ? `../images/projects/${project.images[4]}` : null)
+                            
+            div(class="layout-1__right") 
+                if project.images
+                    img(class="layout-1__img" src=`../images/projects/${project.images[0]}`)
+                    div(class="layout-1__flex")
+                        img(class="layout-1__img" src= project.images[1] ? `../images/projects/${project.images[1]}` : null)
+                        img(class="layout-1__img" src= project.images[2] ? `../images/projects/${project.images[2]}` : null)
+                        //- img(class="layout-1__img" src= project.images[3] ? `../images/projects/${project.images[3]}` : null)
+
+        include footer-tiles.pug
