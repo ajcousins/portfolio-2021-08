@@ -1,8 +1,8 @@
 div(class="content__apps-grid__footer-wrapper")
-            div(class="content__apps-grid__footer-wrapper__footer")
-                each project in projects.data 
-                    div(class="content__apps-grid__item")
-                        a(href=`${project.id}`)
-                            img(class="content__apps-grid__icon" src=`.${project.icon}`)
-                            div(class="content__apps-grid__title") #{project.title}
+    div(class="content__apps-grid__footer-wrapper__footer")
+        each project in projects.data 
+            div(class="content__apps-grid__item")
+                a(href=`${project.id}`)
+                    img(class="content__apps-grid__icon" src=`.${project.icon}`)
+                    div(class="content__apps-grid__title") #{project.title}
 h1(class="side-heading") PORTFOLIO

@@ -1,4 +1,5 @@
 const projects = require("../client/projects");
+const courses = require("../client/courses");
 
 const path = require("path");
 
@@ -11,13 +12,9 @@ exports.portfolio = (req, res) => {
 };
 
 exports.project = (req, res) => {
-  console.log(req.params.id);
-
-  const index = projects.data.findIndex((project) => {
-    if (project.id === req.params.id) return true;
-  });
-
-  // console.log(projects.data[index]);
+  const index = projects.data.findIndex(
+    (project) => project.id === req.params.id
+  );
 
   if (index === -1) res.status(404).render("404-project");
   else {
@@ -29,7 +26,7 @@ exports.project = (req, res) => {
 };
 
 exports.about = (req, res) => {
-  res.status(200).render("about");
+  res.status(200).render("about", { courses });
 };
 
 exports.contact = (req, res) => {

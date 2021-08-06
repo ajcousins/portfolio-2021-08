@@ -126,17 +126,41 @@ a:hover {
   color: white;
 }
 
+.white-hover:hover {
+  color: white;
+}
+
 span {
-  color: black;
   line-height: 1.8em;
 }
 
-span.bold {
+.paragraph-text {
+  line-height: 1.8em;
+}
+
+.bold {
   font-family: "Bold";
 }
 
-div.bold {
-  font-family: "Bold";
+.small {
+  font-size: 0.75rem;
+}
+
+.break {
+  margin-bottom: 1em;
+}
+
+.break-medium {
+  margin-bottom: 3em;
+}
+
+.break-big {
+  margin-bottom: 6em;
+}
+
+.shadow {
+  -webkit-box-shadow: 5px 5px 15px 5px #00000033;
+          box-shadow: 5px 5px 15px 5px #00000033;
 }
 
 li {
@@ -188,28 +212,6 @@ li {
 .content__main {
   width: 100%;
   min-height: 85vh;
-}
-
-.content__sun-col {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 1em;
-  width: 40px;
-  height: 40px;
-  margin-top: 1em;
-  margin-right: 2em;
-}
-
-.content__sun-col__sun {
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-}
-
-.content__sun-col__sun:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
 }
 
 .content__flex-wrapper {
@@ -326,7 +328,7 @@ li {
 }
 
 .layout-1__title {
-  font-size: 4em;
+  font-size: 4rem;
   margin: 2em 0 0.5em 0;
 }
 
@@ -484,5 +486,158 @@ li {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 0.8em;
+}
+
+@media screen and (max-width: 1150px) {
+  .layout-1 {
+    gap: 9em;
+    padding-left: 6em;
+  }
+  .content {
+    margin: 0 6em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sun {
+    top: 3em;
+    width: 6em;
+  }
+  .content__flex-wrapper {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .layout-1 {
+    gap: 6em;
+    padding-left: 4em;
+  }
+  .layout-1__img {
+    max-width: 40em;
+  }
+  .layout-2__info-wrapper {
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+  .content {
+    margin: 0 6em 0 4em;
+  }
+  .content__flex-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content__right__img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content__apps-grid__footer-wrapper {
+    width: 60%;
+    margin: auto auto;
+  }
+  .content__apps-grid__footer-wrapper__footer {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .layout-1 {
+    overflow: visible;
+    width: 100%;
+    padding-right: 4em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .layout-1__left {
+    width: 100%;
+  }
+  .layout-1__right {
+    width: 100%;
+  }
+  .layout-1__img {
+    width: 100%;
+  }
+  .layout-1__flex {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .layout-1__sketch {
+    width: 100%;
+  }
+  .layout-2__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content__apps-grid__item {
+    height: 9em;
+  }
+  .content__apps-grid__icon {
+    height: 6em;
+    border-radius: 1.175em;
+  }
+  .content__apps-grid__title {
+    width: 6em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sun {
+    position: absolute;
+    top: 1.5em;
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .side-heading {
+    display: none;
+  }
+  .content {
+    padding: 5em 0 0 0;
+  }
+  .layout-1 {
+    padding-top: 20vh;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .layout-1__title {
+    font-size: 3rem;
+  }
+  .layout-2__img-wrapper {
+    height: 15em;
+  }
+  .content {
+    margin: 0 2em;
+  }
+  .content__flex-wrapper {
+    margin-top: 3em;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

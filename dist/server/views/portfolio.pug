@@ -3,23 +3,18 @@ html(lang="en")
         title Alvin Cousins | Portfolio
     body
 
-        div(class="canvas")
-            div(class="content")
-                div(class="content__main")
-                    h1(class="side-heading") PORTFOLIO
+        //- div(class="canvas")
 
-                    div(class="content__apps-grid")
+        div(class="content")
+            div(class="content__main")
+                h1(class="side-heading") PORTFOLIO
+
+                div(class="content__apps-grid__footer-wrapper")
+                    div(class="content__apps-grid__footer-wrapper__footer")
                         each project in projects.data 
                             div(class="content__apps-grid__item")
                                 a(href=`project/${project.id}`)
-                                    img(class="content__apps-grid__icon" src=project.icon)
+                                    img(class="content__apps-grid__icon" src=`.${project.icon}`)
                                     div(class="content__apps-grid__title") #{project.title}
 
-                div(class="content__sun-col")
-                    a(href="/")
-                        img(class="content__sun-col__sun" src="images/sun_02.svg")
-                    h4(class="selected") PORTFOLIO
-                    a(href="/about")
-                        h4 ABOUT 
-                    a(href="/contact")
-                        h4 CONTACT
+                include sun-nav.pug
