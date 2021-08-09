@@ -202,7 +202,7 @@ li {
   display: flex;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 3em 0 0 4em;
+  padding: 0 0 0 4em;
 }
 
 .content__contact {
@@ -378,6 +378,7 @@ li {
 
 .layout-2__central-img {
   border-radius: 50%;
+  width: 20em;
 }
 
 .layout-2__info-wrapper {
@@ -488,7 +489,7 @@ li {
   margin-bottom: 0.8em;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1400px) {
   .layout-1 {
     gap: 9em;
     padding-left: 6em;
@@ -632,6 +633,14 @@ li {
   }
   .layout-2__img-wrapper {
     height: 15em;
+  }
+  .layout-2__central-img {
+    border-radius: 50%;
+    width: 15em;
+  }
+  .layout-2__info-wrapper {
+    margin-left: 2em;
+    margin-right: 2em;
   }
   .content {
     margin: 0 2em;

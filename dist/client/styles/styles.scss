@@ -1,9 +1,6 @@
-$temp-area: #00000005;
 $half-black: #0000007f;
 $threequarters-black: #000000bd;
 $shadow: #00000033;
-$orange-hot: #ff773b;
-$orange-cool: #ffc359;
 $background: rgb(255, 233, 171);
 
 @font-face {
@@ -77,10 +74,6 @@ h3 {
   color: $threequarters-black;
   font-size: 1.75rem;
   font-family: "Bold";
-
-  // &.bottom-buffer {
-  //   margin-bottom: 2em;
-  // }
 }
 
 h4 {
@@ -143,9 +136,6 @@ a {
 }
 
 span {
-  // color: black;
-  // Disabled black to span elements and it affects links.
-  // Add class tag to affected spans?
   line-height: 1.8em;
 }
 
@@ -195,12 +185,6 @@ li {
   &__course-heading {
     margin-bottom: 0;
   }
-
-  // &__contact-container {
-  //   display: flex;
-  //   align-items: center;
-  //   margin-bottom: 1em;
-  // }
 }
 
 .blurb {
@@ -216,20 +200,11 @@ li {
   }
 }
 
-// .footer {
-//   position: relative;
-//   display: flex;
-//   justify-content: center;
-//   height: 3em;
-//   margin-bottom: -3em;
-//   font-size: 0.8rem;
-// }
-
 .content {
   display: flex;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 3em 0 0 4em;
+  padding: 0 0 0 4em;
 
   &__contact {
     height: 100%;
@@ -239,22 +214,6 @@ li {
     width: 100%;
     min-height: 85vh;
   }
-
-  // &__sun-col {
-  //   position: sticky;
-  //   top: 1em;
-  //   width: 40px;
-  //   height: 40px;
-  //   margin-top: 1em;
-  //   margin-right: 2em;
-
-  //   &__sun {
-  //     transition: transform 0.2s ease-in-out;
-  //     &:hover {
-  //       transform: scale(1.2);
-  //     }
-  //   }
-  // }
 
   &__flex-wrapper {
     display: grid;
@@ -394,6 +353,7 @@ li {
 
   &__central-img {
     border-radius: 50%;
+    width: 20em;
   }
 
   &__info-wrapper {
@@ -479,7 +439,7 @@ li {
 
 // --- MEDIA QUERIES ---
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1400px) {
   .layout-1 {
     gap: 9em;
     padding-left: 6em;
@@ -543,7 +503,6 @@ li {
   .layout-1 {
     overflow: visible;
     width: 100%;
-    // padding-left: 4em;
     padding-right: 4em;
     display: flex;
     flex-direction: column;
@@ -617,10 +576,17 @@ li {
     &__img-wrapper {
       height: 15em;
     }
+    &__central-img {
+      border-radius: 50%;
+      width: 15em;
+    }
+    &__info-wrapper {
+      margin-left: 2em;
+      margin-right: 2em;
+    }
   }
   .content {
     margin: 0 2em;
-    // padding-top: 1em;
     &__flex-wrapper {
       margin-top: 3em;
     }

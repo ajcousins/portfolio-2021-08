@@ -18,13 +18,13 @@ html(lang="en")
                     div(class="content__left")
                         div(class="paragraphs") 
                             p(class="paragraphs__string") Hi, I’m Alvin Cousins, an aspiring web developer, based in London, UK.
-                            p(class="paragraphs__string") I have been working towards a new career path in tech since December 2020. This comes after working for over 10 years in the construction industry as an Architectural Lighting Designer/ Consultant and as an Architectural Assistant before that. These years working in construction have given me:
+                            p(class="paragraphs__string") I have been working towards a new career path in tech since December 2020. This comes after 10 years in the construction industry as an Architectural Lighting Designer & Consultant and as an Architectural Assistant before that. These years in construction have given me:
                                 ul
                                     li A strong foundation in problem solving and design beyond mere aesthetics.
                                     li Insight into how technologies and systems can elegantly interact and work seamlessly.
                                     li Project delivery and management experience working in various teams with other designers and professionals from other disciplines. 
                             br
-                            p(class="paragraphs__string") I have always had a large appetite for learning new things and broadening my skill set whenever the opportunity arose. This attitude along with a humble mindset and willingness to adapt has served me well so far. Hopefully this puts me in good stead to successfully transition into a career in tech.
+                            p(class="paragraphs__string") I always have a large appetite for learning new things and broadening my skills set whenever the opportunity arises. This attitude along with a humble mindset and willingness to adapt has served me well so far. I believe this puts me in good stead to successfully transition into an exciting new career in tech. 
                             br
                             a(class="paragraphs__cta" href="/contact") 
                                 h3(class="break-medium white-hover") Contact Me
@@ -35,7 +35,13 @@ html(lang="en")
                                 a(href=course.link)
                                     span(class="paragraph-text bold") #{course.title} 
                                 div(class="paragraph-text break") #{course.subHeading} 
-                                div(class="paragraph-text small break-big") #{course.description}
+                                if course.otherLinks
+                                    div(class="paragraph-text small break") #{course.description}
+                                    each link in course.otherLinks
+                                        a(href=link.link)
+                                            div(class="paragraph-text small break-big") - #{link.description}
+                                else 
+                                    div(class="paragraph-text small break-big") #{course.description}
                                 
                     div(class="content__right")
                         img(class="content__right__img shadow" src="images/ac-mug-shot.jpg")

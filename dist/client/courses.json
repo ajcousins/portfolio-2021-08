@@ -4,25 +4,31 @@
       "title": "CS50x",
       "subHeading": "Introduction to the intellectual enterprises of computer science and the art of programming, Harvard University.",
       "link": "https://cs50.harvard.edu/x/2021/",
-      "description": "This course was recommended to me as a way to obtain a solid foundation in the fundamentals before venturing into a career in tech. The course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web programming. Languages include C, Python, and SQL plus HTML, CSS, and JavaScript. Problem sets are inspired by the arts, humanities, social sciences, and sciences. The course culminates in a final project."
+      "description": "This course was recommended to me as a way to obtain a solid foundation in the fundamentals before venturing into a career in tech. The course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web programming. Languages include C, Python, and SQL plus HTML, CSS, and JavaScript. Problem sets are inspired by the arts, humanities, social sciences, and sciences. The course culminates in a final project.",
+      "otherLinks": [
+        {
+          "link": "/project/metric-cook-book",
+          "description": "Link to final project"
+        }
+      ]
     },
     {
       "title": "The Odin Project - Full Stack JavaScript",
       "subHeading": "A free open source coding curriculum that is self-paced and taken entirely online.",
       "link": "https://www.theodinproject.com/home",
-      "description": "It covers many topics including HTML, CSS, JavaScript, Object Oriented Programming principles (course was originally written for Ruby), asynchronous JavaScript and APIs, testing, Webpack, ReactJS, NodeJS, Express, MongoDB and authentication. The course has many programming challenges and projects to exercise new knowledge, skills and code organisation. Students are encouraged to showcase their work to the online community for feedback and discussion."
+      "description": "It covers many topics including HTML, CSS, JavaScript, Object Oriented Programming principles (course was originally written for Ruby), asynchronous JavaScript and APIs, testing, Webpack, NPM, ReactJS, NodeJS, Express, MongoDB and authentication. The course has many programming challenges and projects to exercise new knowledge, skills and code organisation. Students are encouraged to showcase their work to the online community for feedback and discussion."
     },
     {
       "title": "React - The Complete Guide",
       "subHeading": "By Maximilian Schwarzmüller, hosted on Udemy.",
       "link": "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
-      "description": "This course was taken to supplement and expand the basic knowledge I had already gained on The Odin Project. Topics include Class and Functional based components, Hooks, Redux, React Routing."
+      "description": "This course was taken to supplement and expand the basic knowledge I had already gained from The Odin Project. Topics include Class and Functional based components, Hooks, Redux, React Routing."
     },
     {
       "title": "Node.js, Express, MongoDB and More - The Complete Bootcamp 2021",
       "subHeading": "By Jonas Schmedtmann, hosted on Udemy.",
       "link": "https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/",
-      "description": "It covers many topics including HTML, CSS, JavaScript, Object Oriented Programming principles (course was originally written for Ruby), asynchronous JavaScript and APIs, testing, WThis course was used to supplement material on the Odin Project as it ventured into the back-end. It covers Node.JS, Express, using MongoDB with Mongoose, data modelling, authentication, authorisation and security. The course walks through creating a rest API from scratch and building a server-side rendered site with Pug templates."
+      "description": "This course was used to supplement material on The Odin Project as it ventured into the back-end. It covers Node.JS, Express, using MongoDB with Mongoose, data modelling, authentication, authorisation and security. The course walks through creating a rest API from scratch and building a server-side rendered site with Pug templates."
     },
     {
       "title": "JavaScript Algorithms and Data Structures",
