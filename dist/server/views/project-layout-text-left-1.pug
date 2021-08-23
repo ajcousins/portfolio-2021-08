@@ -17,19 +17,20 @@ html(lang="en")
                 div(class="layout-1__block-text")
                     div(class="layout-1__label") Links: 
                     br
-                    span(class="item")
-                        a(href=project.links.live target="_blank") Live 
-                        span #{"| "}
-                            a(href=project.links.code target="_blank") Code 
-                        if project.links.video
+                    each item, index in project.links
+                        span(class="item")
+                            a(href=item.link target="_blank") #{item.label} 
+                        if index !== project.links.length - 1
                             span #{"| "}
-                                a(href=project.links.video target="_blank") Video 
+                      
                     br
                     div(class="layout-1__label") Technologies: 
                     br
                     div(class="tech-icons")
                         each tech in project.stack 
-                            img(class="tech-icons__icon"  src=`../images/icons/technologies/${tech}.svg` alt=tech)
+                            div(class="tech-icons__wrapper")
+                                img(class="tech-icons__icon"  src=`../images/icons/technologies/${tech}.svg` alt=tech)
+                                span(class="tech-icons__text") #{tech.replace("-", " ")}
                             
             div(class="layout-1__right") 
                 if project.images

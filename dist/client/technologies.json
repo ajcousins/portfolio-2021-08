@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "skill": "JavaScript",
+      "category": "language"
+    },
+    {
+      "skill": "TypeScript",
+      "category": "language"
+    },
+    {
+      "skill": "Python",
+      "category": "language"
+    },
+    {
+      "skill": "C",
+      "category": "language"
+    },
+    {
+      "skill": "HTML-5",
+      "category": "language"
+    },
+    {
+      "skill": "CSS",
+      "category": "language"
+    },
+
+    {
+      "skill": "SQLite",
+      "category": "database"
+    },
+    {
+      "skill": "Mongo-DB",
+      "category": "database"
+    },
+    {
+      "skill": "Firestore",
+      "category": "database"
+    },
+    {
+      "skill": "React-JS",
+      "category": "other-tech"
+    },
+    {
+      "skill": "Redux",
+      "category": "other-tech"
+    },
+    {
+      "skill": "Node-JS",
+      "category": "other-tech"
+    },
+    {
+      "skill": "Express",
+      "category": "other-tech"
+    },
+    {
+      "skill": "Flask",
+      "category": "other-tech"
+    },
+
+    {
+      "skill": "React-Router",
+      "category": "other-tech"
+    },
+    {
+      "skill": "JWT",
+      "category": "other-tech"
+    },
+    {
+      "skill": "AXIOS",
+      "category": "other-tech"
+    },
+    {
+      "skill": "Passport-JS",
+      "category": "other-tech"
+    },
+    {
+      "skill": "Three-JS",
+      "category": "other-tech"
+    },
+    {
+      "skill": "AWS",
+      "category": "other-tech"
+    },
+    {
+      "skill": "Firebase",
+      "category": "other-tech"
+    },
+
+    {
+      "skill": "Sass",
+      "category": "other-tech"
+    },
+
+    {
+      "skill": "Adobe-PhotoShop",
+      "category": "design"
+    },
+    {
+      "skill": "Adobe-Illustrator",
+      "category": "design"
+    },
+    {
+      "skill": "Adobe-InDesign",
+      "category": "design"
+    },
+    {
+      "skill": "Rhino-3D",
+      "category": "design"
+    }
+  ]
+}

@@ -19,18 +19,20 @@ html(lang="en")
                         p(class="paragraphs__string") #{paragraph}
                     div 
                         div(class="layout-2__label") Links: 
+
                         br
-                        span(class="item")
-                            a(href=project.links.live target="_blank") Live 
-                            span #{"| "}
-                                a(href=project.links.code target="_blank") Code 
-                            if project.links.video
+                        each item, index in project.links
+                            span(class="item")
+                                a(href=item.link target="_blank") #{item.label} 
+                            if index !== project.links.length - 1
                                 span #{"| "}
-                                    a(href=project.links.video target="_blank") Video 
+
                     div
                         br
                         div(class="tech-icons")
                             each tech in project.stack 
-                                img(class="tech-icons__icon"  src=`../images/icons/technologies/${tech}.svg` alt=tech)
+                                div(class="tech-icons__wrapper")
+                                    img(class="tech-icons__icon"  src=`../images/icons/technologies/${tech}.svg` alt=tech)
+                                    span(class="tech-icons__text") #{tech.replace("-", " ")}
 
         include footer-tiles.pug

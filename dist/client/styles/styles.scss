@@ -278,6 +278,23 @@ li {
   }
 }
 
+.skills {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  &__section-title {
+    margin-top: 4.5em;
+    margin-bottom: 0.5em;
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__icons {
+    width: 110px;
+    margin-right: 1em;
+  }
+}
+
 // --- PROJECT PAGES ---
 
 .sun {
@@ -293,9 +310,18 @@ li {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5em;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+  &__text {
+    font-size: 0.8rem;
+  }
   &__icon {
     height: 5em;
-    margin-right: 0.5em;
+    // margin-right: 0.5em;
   }
 }
 

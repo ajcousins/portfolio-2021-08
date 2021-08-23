@@ -1,5 +1,6 @@
 const projects = require("../client/projects");
 const courses = require("../client/courses");
+const technologies = require("../client/technologies");
 
 const path = require("path");
 
@@ -26,7 +27,7 @@ exports.project = (req, res) => {
 };
 
 exports.about = (req, res) => {
-  res.status(200).render("about", { courses });
+  res.status(200).render("about", { courses, technologies });
 };
 
 exports.contact = (req, res) => {

@@ -1,25 +1,53 @@
 {
   "data": [
     {
+      "title": "Gallery",
+      "subHeading": "A Gallery and e-commerce shop",
+      "id": "gallery",
+      "layout": "project-layout-text-left-1",
+      "images": ["gallery-scrn-01.png", "gallery-scrn-02.png"],
+      "icon": "./images/icons/gallery_icon.png",
+      "links": [
+        {
+          "label": "Live",
+          "link": "https://ajcousins.github.io/gallery-app/#/"
+        },
+        { "label": "Code", "link": "https://github.com/ajcousins/gallery-app" }
+      ],
+      "stack": ["React-JS", "Redux", "React-Router", "Sass", "Firebase"],
+      "explanation": [
+        "This project was built as a way to help a friend sell their artwork online. The application is loosely modelled on Instagram, organising images into collections, where each collection has a ‘front/ title’ image which displays in a grid forming their overall portfolio.",
+        "All images and collections can be viewed by all anonymous users at the ‘front of house’ site. Images and collections can be created, updated and deleted through the dashboard, which requires email and password authentication to access.",
+        "Google’s Firebase was leveraged for its authentication, Firestore database and Storage to securely save images. React and React-Router were used on the front-end, with Redux used to manage global state.",
+        "This project is still a work in progress. Next steps include adding a functioning basket, checkout and secure payment capabilities using either PayPal or Stripe."
+      ]
+    },
+    {
       "title": "Twittr",
       "subHeading": "A Twitter Clone",
       "id": "twittr",
       "layout": "project-layout-text-left-1",
       "images": ["twittr-scrn-01.png", "twittr-scrn-02.png"],
       "icon": "./images/icons/twitter_icon.png",
-      "links": {
-        "live": "https://hydro-eds-18702.herokuapp.com/",
-        "code": "https://github.com/ajcousins/odinbook"
-      },
+      "links": [
+        {
+          "label": "Live",
+          "link": "https://hydro-eds-18702.herokuapp.com/"
+        },
+        {
+          "label": "Code",
+          "link": "https://github.com/ajcousins/odinbook"
+        }
+      ],
       "stack": [
-        "node",
-        "express",
-        "axios",
-        "jwt",
-        "mongo",
-        "react",
-        "sass",
-        "aws"
+        "Node-JS",
+        "Express",
+        "AXIOS",
+        "JWT",
+        "Mongo-DB",
+        "React-JS",
+        "Sass",
+        "AWS"
       ],
       "explanation": [
         "This project aims to clone the existing social media application: Twitter. Here I was able to focus exclusively on the code and how the technologies interfaced, as the design was already taken care of.",
@@ -35,14 +63,20 @@
       "layout": "project-layout-text-left-1",
       "images": ["meal-scrn-01.png", "meal-scrn-02.png"],
       "icon": "./images/icons/meal-planner_icon.png",
-      "links": {
-        "live": "https://powerful-depths-88188.herokuapp.com/",
-        "code": "https://github.com/ajcousins/meals-manager"
-      },
-      "stack": ["node", "express", "mongo", "pug", "passport"],
+      "links": [
+        {
+          "label": "Live",
+          "link": "https://powerful-depths-88188.herokuapp.com/"
+        },
+        {
+          "label": "Code",
+          "link": "https://github.com/ajcousins/meals-manager"
+        }
+      ],
+      "stack": ["Node-JS", "Express", "Mongo-DB", "Pug", "Passport-JS"],
       "explanation": [
         "An application which manages food items put in the fridge (or any other location) and orders items to ensure foods that are near expiry get eaten. The idea was to address the problem of food items unnecessarily going off at the back of the fridge.",
-        "With this app I was able to put newly learned back-end skills into practise, such as simple database management: creating users, locations and food items; as well as authentication using Passport.js.",
+        "With this app I was able to put newly learned back-end skills into practise, such as simple database management: creating users, locations and food items; as well as authentication using Passport-JS.js.",
         "All pages are server-side rendered through the use of Pug templates."
       ]
     },
@@ -53,11 +87,18 @@
       "layout": "project-layout-text-left-1",
       "images": ["pk-scrn-01.png", "pk-scrn-02.png"],
       "icon": "./images/icons/pepper-kitchen_icon.png",
-      "links": {
-        "live": "https://ajcousins.github.io/pk-shop/",
-        "code": "https://github.com/ajcousins/pk-shop"
-      },
-      "stack": ["react", "react-router"],
+      "links": [
+        {
+          "label": "Live",
+          "link": "https://ajcousins.github.io/pk-shop/"
+        },
+        {
+          "label": "Code",
+          "link": "https://github.com/ajcousins/pk-shop"
+        }
+      ],
+
+      "stack": ["React-JS", "React-Router"],
       "explanation": [
         "A simple multi-page React application using React Router to direct routes and React Parallax for the scroll effect.",
         "These technologies have enabled me to recreate a website I had previously designed on Squarespace for a hot sauce company I had helped create in 2018. At the company I was responsible for the majority of the creative elements, including design and production of the packaging, marketing material and website. The company is no longer selling hot sauce and the original website is no longer live, but thankfully this new application can now live for free on GitHub as a personal tribute."
@@ -76,11 +117,17 @@
         "weather-sketch-01.png"
       ],
       "icon": "./images/icons/weather_icon.png",
-      "links": {
-        "live": "https://ajcousins.github.io/weather-app/",
-        "code": "https://github.com/ajcousins/weather-app"
-      },
-      "stack": ["javascript"],
+      "links": [
+        {
+          "label": "Live",
+          "link": "https://ajcousins.github.io/weather-app/"
+        },
+        {
+          "label": "Code",
+          "link": "https://github.com/ajcousins/weather-app"
+        }
+      ],
+      "stack": ["JavaScript"],
       "explanation": [
         "A simple weather application which calls on the openweathermap.org API for data covering the next 7 days. I took this opportunity to learn about CSS transitions, animations and SVGs which I think work particularly well for this app. The design inspiration is from the weather graphic shown at the end of the BBC weather forecast."
       ]
@@ -92,11 +139,18 @@
       "layout": "project-layout-central-1",
       "images": ["noughts-scrn-01.png"],
       "icon": "./images/icons/tictactoe_icon.png",
-      "links": {
-        "live": "https://ajcousins.github.io/tictactoe/",
-        "code": "https://github.com/ajcousins/tictactoe"
-      },
-      "stack": ["javascript"],
+      "links": [
+        {
+          "label": "Live",
+          "link": "https://ajcousins.github.io/tictactoe/"
+        },
+        {
+          "label": "Code",
+          "link": "https://github.com/ajcousins/tictactoe"
+        }
+      ],
+
+      "stack": ["JavaScript"],
       "explanation": [
         "This was my first attempt at implementing AI through the Minimax algorithm (set opponent to 'Hard Computer'), which recursively evaluates the board for each side, returning the best move for any given position."
       ]
@@ -108,12 +162,22 @@
       "images": ["metric-scrn-01.png", "metric-scrn-02.png"],
       "subHeading": "",
       "icon": "./images/icons/metriccookbook_icon.png",
-      "links": {
-        "live": "https://metriccookbook.herokuapp.com/",
-        "code": "https://github.com/ajcousins/Metric-Cookbook",
-        "video": "https://www.youtube.com/watch?v=IwiIrlaTZU0"
-      },
-      "stack": ["python", "flask", "sqlite", "javascript"],
+      "links": [
+        {
+          "label": "Live",
+          "link": "https://metriccookbook.herokuapp.com/"
+        },
+        {
+          "label": "Code",
+          "link": "https://github.com/ajcousins/Metric-Cookbook"
+        },
+        {
+          "label": "Video",
+          "link": "https://www.youtube.com/watch?v=IwiIrlaTZU0"
+        }
+      ],
+
+      "stack": ["Python", "Flask", "SQLite", "JavaScript"],
       "explanation": [
         "Submission for my CS50x final project: Cook Book, which is an online app which processes and converts recipe quantities with a range of different units. The app was intended to solve the problem of having to deal with a range of different cooking units for recipes over the internet, with the majority of American recipes using imperial units. The app allows a user to simply paste in the ingredients list with quantities, and for each item to be automatically converted to metric units (or vice-versa, to imperial). The app also allows scaling of recipes to accommodate different serving numbers.",
         "The project uses Flask, a back-end Python framework, to handle the processing of data, which is stored in a SQL database (SQLite). Simple JavaScript is also used on the front-end to render changes to serving quantities.",
