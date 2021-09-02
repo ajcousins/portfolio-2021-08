@@ -9,8 +9,12 @@
       "icon": "./images/icons/gallery_icon.png",
       "links": [
         {
-          "label": "Live",
+          "label": "Demo",
           "link": "https://ajcousins.github.io/gallery-app/#/"
+        },
+        {
+          "label": "Dashboard Demo",
+          "link": "https://ajcousins.github.io/gallery-app/#/dashboard"
         },
         { "label": "Code", "link": "https://github.com/ajcousins/gallery-app" }
       ],

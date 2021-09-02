@@ -31,10 +31,6 @@ document.body.appendChild(renderer.domElement);
 // PICKABLE SET UP
 const pickableObjects: THREE.Mesh[] = [];
 
-// CONTROLS
-// const controls = new OrbitControls(camera, renderer.domElement);
-// controls.enableDamping = true;
-
 // LIGHTS
 const light = new THREE.SpotLight();
 light.position.set(0, 12, -200);
@@ -48,11 +44,9 @@ light.shadow.camera.far =
 light.angle = 0.1;
 scene.add(light);
 scene.add(light.target);
-// const helper = new THREE.CameraHelper(light.shadow.camera);
-// scene.add(helper);
 
 // OBJECTS
-// const boxGeometry: THREE.BoxGeometry = new THREE.BoxGeometry();
+
 const sunGeometry = new THREE.IcosahedronGeometry(2, 4);
 const groundPlaneGeometry = new THREE.PlaneGeometry(80, 120);
 const portfolioSelectGeo = new THREE.BoxGeometry(1.1, 6.4, 0.1);
@@ -125,7 +119,6 @@ const sunMesh = new THREE.Mesh(sunGeometry, sunMaterial);
 sunMesh.position.set(0, 12, -200);
 scene.add(sunMesh);
 
-// const groundPlane = new THREE.Mesh(groundPlaneGeometry, sunMaterial);
 const groundPlane = new THREE.Mesh(groundPlaneGeometry, shadowMaterial);
 groundPlane.position.set(0, 0, -30);
 groundPlane.receiveShadow = true;
@@ -154,19 +147,6 @@ contactSelectMesh.name = "select-contact";
 pickableObjects.push(contactSelectMesh);
 scene.add(contactSelectMesh);
 
-////
-// let isSmallScreen = false;
-
-// const setScreenCondition = () => {
-//   if (window.innerWidth < 800 && !isSmallScreen) {
-//     isSmallScreen = true;
-//   } else if (window.innerWidth >= 800 && isSmallScreen) {
-//     isSmallScreen = false;
-//     animate();
-//   }
-// };
-// setScreenCondition();
-
 window.addEventListener("resize", onWindowResize, false);
 function onWindowResize() {
   //   setScreenCondition();
@@ -175,14 +155,6 @@ function onWindowResize() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   render();
 }
-
-// //////
-// const gui = new GUI();
-// const userControl = gui.addFolder("UserControls");
-// userControl.add(light.position, "y", 10, 35, 0.01);
-// userControl.add(camera.position, "x", -10, 10, 0.01);
-// userControl.open();
-// ////
 
 camera.lookAt(new THREE.Vector3(0, 3.5, -21.5));
 
@@ -220,13 +192,15 @@ function onMouseMove(event: MouseEvent) {
     switch (intersects[0].object.name) {
       case "select-portfolio":
         portfolioTroi.color = 0xffffff;
-        // portfolioTroi.fillOpacity = 1;
+        portfolioTroi.fillOpacity = 1;
         break;
       case "select-about":
         aboutTroi.color = 0xffffff;
+        aboutTroi.fillOpacity = 1;
         break;
       case "select-contact":
         contactTroi.color = 0xffffff;
+        contactTroi.fillOpacity = 1;
         break;
       default:
         return;
@@ -236,7 +210,9 @@ function onMouseMove(event: MouseEvent) {
     portfolioTroi.color = 0x000000;
     aboutTroi.color = 0x000000;
     contactTroi.color = 0x000000;
-    // portfolioTroi.fillOpacity = 0.7;
+    portfolioTroi.fillOpacity = 0.7;
+    aboutTroi.fillOpacity = 0.7;
+    contactTroi.fillOpacity = 0.7;
   }
 }
 
@@ -324,10 +300,8 @@ function onTouchEnd() {
 }
 
 var animate = function () {
-  //   if (isSmallScreen) return;
   requestAnimationFrame(animate);
   TWEEN.update();
-  //   myText.sync();
   render();
 };
 function render() {
