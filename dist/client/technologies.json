@@ -54,6 +54,14 @@
       "category": "other-tech"
     },
     {
+      "skill": "GraphQL",
+      "category": "other-tech"
+    },
+    {
+      "skill": "Apollo",
+      "category": "other-tech"
+    },
+    {
       "skill": "Flask",
       "category": "other-tech"
     },
@@ -89,6 +97,10 @@
 
     {
       "skill": "Sass",
+      "category": "other-tech"
+    },
+    {
+      "skill": "Jest",
       "category": "other-tech"
     },
 
