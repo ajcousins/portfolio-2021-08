@@ -354,6 +354,30 @@ li {
   height: 5em;
 }
 
+.big-link-btn {
+  cursor: pointer;
+  background-color: #000000bd;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1.2rem;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+  color: #ffe9ab;
+  border-radius: 0.2em;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+
+.big-link-btn span {
+  font-family: "Bold";
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.big-link-btn:hover {
+  background-color: black;
+}
+
 .layout-1 {
   background-color: #ffe9ab;
   overflow: hidden;

@@ -18,10 +18,13 @@ html(lang="en")
                     div(class="layout-1__label") Links: 
                     br
                     each item, index in project.links
-                        span(class="item")
-                            a(href=item.link target="_blank") #{item.label} 
-                        if index !== project.links.length - 1
-                            span #{"| "}
+                        //- span(class="item")
+                        //-     a(href=item.link target="_blank") #{item.label} 
+                        //- if index !== project.links.length - 1
+                        //-     span #{"| "}
+                        a(href=item.link target="_blank")
+                                button(class="big-link-btn")
+                                    span #{item.label} 
                       
                     br
                     div(class="layout-1__label") Technologies: 

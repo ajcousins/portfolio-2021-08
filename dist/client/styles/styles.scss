@@ -325,6 +325,28 @@ li {
   }
 }
 
+.big-link-btn {
+  cursor: pointer;
+  background-color: $threequarters-black;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1.2rem;
+
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+  color: $background;
+  border-radius: 0.2em;
+  transition: background-color 0.25s;
+  span {
+    font-family: "Bold";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  &:hover {
+    background-color: black;
+  }
+}
+
 .layout-1 {
   background-color: $background;
   overflow: hidden;
